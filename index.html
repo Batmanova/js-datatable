@@ -1,75 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-    <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"/>
-    <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
-    <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
-</head>
-<body>
-<style rel="stylesheet" type="text/css">
-table {
-    font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
-    font-size: 14px;
-    background: white;
-    max-width: 70%;
-    width: 70%;
-    border-collapse: collapse;
-    text-align: left;
-}
-th {
-    font-weight: normal;
-    color: #039;
-    border-bottom: 2px solid #6678b1;
-    padding: 10px 8px;
-}
-td {
-    color: #669;
-    padding: 9px 8px;
-}
-</style>
-<script src="./script.js">
-</script>
-<table>
-    <tr><th>Регистрация</th></tr>
-    <tr><td>Пожалуйста заполните форму</td></tr>
+    <head>
+        <meta charset="UTF-8">
+        <title>Title</title>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.11.3/css/jquery.dataTables.css"/>
+        <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/buttons/2.0.1/css/buttons.dataTables.css"/>
+        <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/1.11.3/js/jquery.dataTables.js"></script>
+        <script type="text/javascript" src="https://cdn.datatables.net/buttons/2.0.1/js/dataTables.buttons.js"></script>
+    </head>
+    <body>
+    <style rel="stylesheet" type="text/css">
+    table {
+        font-family: "Lucida Sans Unicode", "Lucida Grande", Sans-Serif, serif;
+        font-size: 14px;
+        background: white;
+        max-width: 70%;
+        width: 70%;
+        border-collapse: collapse;
+        text-align: left;
+    }
+    th {
+        font-weight: normal;
+        color: #039;
+        border-bottom: 2px solid #6678b1;
+        padding: 10px 8px;
+    }
+    td {
+        color: #669;
+        padding: 9px 8px;
+    }
+    </style>
+    <script src="./script.js">
+    </script>
+    <table>
+        <tr><th>Регистрация</th></tr>
+        <tr><td>Пожалуйста заполните форму</td></tr>
+        <tr><td>
+            <b>Email</b>
+            <input type="text" placeholder="Введите Email" id="email">
+        </td></tr>
+        <tr><td>
+            <b>Пароль</b>
+            <input type="password" placeholder="Введите пароль" id="password">
+        </td></tr>
+        <tr><td>
+            <b>Пароль ещё раз</b>
+            <input type="password" placeholder="Повторите пароль" id="check">
+        </td></tr>
+        <tr><td>
+            <button id="save">Save</button>
+            <button id="load">Load</button>
+        </td></tr>
+    </table>
+    
+    <p>Уже зарегистрированы? <a href="#">Войти</a>.</p>
+    <table>
+    <tr><td>Удалить по логину</td></tr>
     <tr><td>
-        <b>Email</b>
-        <input type="text" placeholder="Введите Email" id="email">
+        <input type="text" placeholder="Введите логин" id="login">
+        <button id="delete">Удалить</button>
     </td></tr>
+    
+    <tr><td>Изменить по логину</td></tr>
     <tr><td>
-        <b>Пароль</b>
-        <input type="password" placeholder="Введите пароль" id="password">
+        <input type="text" placeholder="Введите логин" id="oldlogin">
+        <input type="text" placeholder="Введите новый пароль" id="new">
+        <button id="change">Изменить</button>
     </td></tr>
-    <tr><td>
-        <b>Пароль ещё раз</b>
-        <input type="password" placeholder="Повторите пароль" id="check">
-    </td></tr>
-    <tr><td>
-        <button id="save">Save</button>
-        <button id="load">Load</button>
-    </td></tr>
-</table>
+    </table>
+    <div class="container">
+        <table id="dt-table">
+          <thead>
+            <tr>
+              <th>Login</th>
+              <th>Password</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+                <td>Тут логин</td>
+                <td>Тут пароль</td>
+            </tr>
+        </tbody>
+        </table>    
+    </div>
 
-<p>Уже зарегистрированы? <a href="#">Войти</a>.</p>
 
-<div class="container">
-    <table id="dt-table">
-      <thead>
-        <tr>
-          <th>Логин</th>
-          <th>Пароль</th>
-        </tr>
-      </thead>
-      <tbody>
-        <tr>
-            <td>Тут логин</td>
-            <td>Тут пароль</td>
-        </tr>
-    </tbody>
-    </table>    
-</div>
 
-</body>
 </html>
+
